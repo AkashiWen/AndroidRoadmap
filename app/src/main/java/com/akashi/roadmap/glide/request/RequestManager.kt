@@ -61,6 +61,10 @@ class RequestManager(private val fragmentActivity: FragmentActivity) : Lifecycle
      */
     override fun onDestroy() {
         contextLifecycle.removeListener(this)
+        // 1. 关闭活动缓存
+        engine.close()
+        // 2. 关闭请求中的任务
+
         // .. 其他关闭操作
     }
 

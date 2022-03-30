@@ -53,6 +53,15 @@ class ActiveCache {
         map[key] = WeakReference(engineResource, getQueue())
     }
 
+    fun close() {
+        for (entry in map.entries) {
+            entry.value.get()?.mBitmap?.recycle()
+        }
+        map.clear()
+        isThreadClosed = true
+        System.gc()
+    }
+
     /**
      * 当弱引用被回收，首先被放入回收queue，由我们自行处理
      */

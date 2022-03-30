@@ -12,6 +12,7 @@ import com.akashi.roadmap.glide.disk.DiskLruCacheImpl
 
 /**
  * bitmap数据加载引擎
+ * 三级缓存实现的地方
  */
 class Engine : ResponseListener {
 
@@ -61,6 +62,10 @@ class Engine : ResponseListener {
         val cache = getCache()
         this.imageView.setImageBitmap(cache?.mBitmap)
         return cache
+    }
+
+    fun close() {
+        activeCache.close()
     }
 
     private fun getCache(): EngineResource? {
