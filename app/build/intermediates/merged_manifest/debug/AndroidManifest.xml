@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.akashi.road1"
+    package="com.akashi.roadmap"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -13,7 +13,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:name="com.akashi.road1.MainApplication"
+        android:name="com.akashi.roadmap.MainApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -24,7 +24,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Roadmap" >
         <activity
-            android:name="com.akashi.road1.MainActivity"
+            android:name="com.akashi.roadmap.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,11 +33,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.akashi.road1.okhttp.OkHttpActivity"
+            android:name="com.akashi.roadmap.okhttp.OkHttpActivity"
             android:exported="false" />
-        <activity android:name="com.akashi.road1.glide.GlideActivity" />
+        <activity android:name="com.akashi.roadmap.glide.GlideActivity" />
         <activity
-            android:name="com.akashi.road1.FullscreenActivity"
+            android:name="com.akashi.roadmap.FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false"
             android:theme="@style/Theme.Roadmap.Fullscreen" />

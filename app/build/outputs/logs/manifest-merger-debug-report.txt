@@ -45,7 +45,7 @@ INJECTED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidMa
 INJECTED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:2:1-39:12
 INJECTED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:2:1-39:12
 	package
-		ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:3:5-31
+		ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:3:5-33
 		INJECTED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -97,13 +97,13 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/akas
 	android:theme
 		ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:18:9-45
 	android:name
-		ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:11:9-40
-activity#com.akashi.road1.MainActivity
+		ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:11:9-58
+activity#com.akashi.roadmap.MainActivity
 ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:19:9-27:20
 	android:exported
 		ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:21:13-36
 	android:name
-		ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:20:13-41
+		ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:20:13-59
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:22:13-26:29
 action#android.intent.action.MAIN
@@ -114,17 +114,17 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:25:17-77
 	android:name
 		ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:25:27-74
-activity#com.akashi.road1.okhttp.OkHttpActivity
+activity#com.akashi.roadmap.okhttp.OkHttpActivity
 ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:28:9-30:40
 	android:exported
 		ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:30:13-37
 	android:name
-		ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:29:13-50
-activity#com.akashi.road1.glide.GlideActivity
-ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:31:9-57
+		ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:29:13-68
+activity#com.akashi.roadmap.glide.GlideActivity
+ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:31:9-75
 	android:name
-		ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:31:19-54
-activity#com.akashi.road1.FullscreenActivity
+		ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:31:19-72
+activity#com.akashi.roadmap.FullscreenActivity
 ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:32:9-36:63
 	android:exported
 		ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:35:13-37
@@ -133,7 +133,7 @@ ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManif
 	android:theme
 		ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:36:13-60
 	android:name
-		ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:33:13-47
+		ADDED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:33:13-65
 uses-sdk
 INJECTED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml
