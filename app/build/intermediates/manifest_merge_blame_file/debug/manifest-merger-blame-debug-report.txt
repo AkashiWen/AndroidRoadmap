@@ -39,45 +39,44 @@
 23-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:16:9-54
 24        android:supportsRtl="true"
 24-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:17:9-35
-25        android:testOnly="true"
-26        android:theme="@style/Theme.Roadmap" >
-26-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:18:9-45
-27        <activity
-27-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:19:9-27:20
-28            android:name="com.akashi.road1.MainActivity"
-28-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:20:13-41
-29            android:exported="true" >
-29-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:21:13-36
-30            <intent-filter>
-30-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:22:13-26:29
-31                <action android:name="android.intent.action.MAIN" />
-31-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:23:17-69
-31-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:23:25-66
-32
-33                <category android:name="android.intent.category.LAUNCHER" />
-33-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:25:17-77
-33-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:25:27-74
-34            </intent-filter>
-35        </activity>
-36        <activity
-36-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:28:9-30:40
-37            android:name="com.akashi.road1.okhttp.OkHttpActivity"
-37-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:29:13-50
-38            android:exported="false" />
-38-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:30:13-37
-39        <activity android:name="com.akashi.road1.glide.GlideActivity" />
-39-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:31:9-57
-39-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:31:19-54
-40        <activity
-40-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:32:9-36:63
-41            android:name="com.akashi.road1.FullscreenActivity"
-41-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:33:13-47
-42            android:configChanges="orientation|keyboardHidden|screenSize"
-42-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:34:13-74
-43            android:exported="false"
-43-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:35:13-37
-44            android:theme="@style/Theme.Roadmap.Fullscreen" />
-44-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:36:13-60
-45    </application>
-46
-47</manifest>
+25        android:theme="@style/Theme.Roadmap" >
+25-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:18:9-45
+26        <activity
+26-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:19:9-27:20
+27            android:name="com.akashi.road1.MainActivity"
+27-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:20:13-41
+28            android:exported="true" >
+28-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:21:13-36
+29            <intent-filter>
+29-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:22:13-26:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:23:17-69
+30-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:23:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:25:17-77
+32-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:25:27-74
+33            </intent-filter>
+34        </activity>
+35        <activity
+35-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:28:9-30:40
+36            android:name="com.akashi.road1.okhttp.OkHttpActivity"
+36-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:29:13-50
+37            android:exported="false" />
+37-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:30:13-37
+38        <activity android:name="com.akashi.road1.glide.GlideActivity" />
+38-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:31:9-57
+38-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:31:19-54
+39        <activity
+39-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:32:9-36:63
+40            android:name="com.akashi.road1.FullscreenActivity"
+40-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:33:13-47
+41            android:configChanges="orientation|keyboardHidden|screenSize"
+41-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:34:13-74
+42            android:exported="false"
+42-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:35:13-37
+43            android:theme="@style/Theme.Roadmap.Fullscreen" />
+43-->/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/AndroidManifest.xml:36:13-60
+44    </application>
+45
+46</manifest>
