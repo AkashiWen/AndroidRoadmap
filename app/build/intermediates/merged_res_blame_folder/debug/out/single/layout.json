@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/akashi/AndroidStudioProjects/Roadmap/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_glide.xml",
+        "source": "/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/res/layout/activity_glide.xml"
+    },
+    {
+        "merged": "/Users/akashi/AndroidStudioProjects/Roadmap/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/akashi/AndroidStudioProjects/Roadmap/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_fullscreen.xml",
+        "source": "/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/res/layout/activity_fullscreen.xml"
+    },
+    {
+        "merged": "/Users/akashi/AndroidStudioProjects/Roadmap/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_ok_http.xml",
+        "source": "/Users/akashi/AndroidStudioProjects/Roadmap/app/src/main/res/layout/activity_ok_http.xml"
+    }
+]
