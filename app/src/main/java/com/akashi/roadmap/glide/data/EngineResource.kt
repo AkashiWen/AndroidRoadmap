@@ -22,11 +22,11 @@ data class EngineResource(
      */
     var count: Int = 0
 ) {
-    fun reUse() {
+    fun acquire() {
         if (mBitmap?.isRecycled == true) {
-            logW("reUse(): bitmap已经被回收了, key=$key, count=$count")
+            logW("acquire(): bitmap已经被回收了, key=$key, count=$count")
             return
         }
-        this.count++
+        ++this.count
     }
 }

@@ -95,7 +95,7 @@ class Engine : ResponseListener {
     private fun getActiveCache(): EngineResource? {
         val cache = activeCache.get(key)
         return cache?.also {
-            it.reUse()
+            it.acquire()
         }
     }
 
@@ -108,7 +108,7 @@ class Engine : ResponseListener {
             // 从内存缓存删除 放入活动缓存
             memoryCache.shouldRemove(key)
             activeCache.put(key, engineResource)
-            engineResource.reUse()
+            engineResource.acquire()
         }
         return engineResource
     }
@@ -120,7 +120,7 @@ class Engine : ResponseListener {
         val engineResource = diskCache.get(key)
         if (engineResource != null) {
             activeCache.put(key, engineResource)
-            engineResource.reUse()
+            engineResource.acquire()
         }
         return engineResource
     }
@@ -132,7 +132,7 @@ class Engine : ResponseListener {
         // 2. 放入活动缓存
         activeCache.put(key, engineResource)
         // 3. +1
-        engineResource.reUse()
+        engineResource.acquire()
 
         imageView.setImageBitmap(engineResource.mBitmap)
     }
