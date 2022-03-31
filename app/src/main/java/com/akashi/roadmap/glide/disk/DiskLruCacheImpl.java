@@ -2,9 +2,9 @@ package com.akashi.roadmap.glide.disk;
 
 import static android.os.Environment.DIRECTORY_DOWNLOADS;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.os.Environment;
 import android.util.Log;
 
 import com.akashi.roadmap.glide.data.EngineResource;
@@ -29,8 +29,8 @@ public class DiskLruCacheImpl {
 
     private DiskLruCache diskLruCache;
 
-    public DiskLruCacheImpl() {
-        File file = new File(Environment.getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS), DISKLRU_CACHE_DIR);
+    public DiskLruCacheImpl(Context context) {
+        File file = new File(context.getExternalFilesDir(DIRECTORY_DOWNLOADS), DISKLRU_CACHE_DIR);
         try {
             diskLruCache = DiskLruCache.open(file, APP_VERSION, VALUE_COUNT, MAX_SIZE);
         } catch (IOException e) {

@@ -47,7 +47,7 @@ class Engine : ResponseListener {
      * 磁盘缓存
      */
     private val diskCache: DiskLruCacheImpl by lazy {
-        DiskLruCacheImpl()
+        DiskLruCacheImpl(context)
     }
 
     fun load(path: String, context: Context) {

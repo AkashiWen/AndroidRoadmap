@@ -3,6 +3,7 @@ package com.akashi.roadmap.common
 import android.Manifest
 import android.app.Activity
 import android.content.pm.PackageManager
+import android.os.Build
 import android.util.Log
 import android.view.View
 import androidx.core.app.ActivityCompat
@@ -54,14 +55,24 @@ fun Activity.checkPermissionReadStorage(requestCode: Int) {
             // sees the explanation, try again to request the permission.
         } else {
             // No explanation needed, we can request the permission.
-            ActivityCompat.requestPermissions(
-                this,
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 arrayOf(
                     Manifest.permission.READ_EXTERNAL_STORAGE,
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE
-                ),
-                requestCode
-            )
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                    Manifest.permission.MANAGE_EXTERNAL_STORAGE
+                )
+            } else {
+                arrayOf(
+                    Manifest.permission.READ_EXTERNAL_STORAGE,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                )
+            }.let {
+                ActivityCompat.requestPermissions(
+                    this,
+                    it,
+                    requestCode
+                )
+            }
         }
     }
 }
