@@ -1,8 +1,9 @@
 package com.akashi.roadmap.glide.request
 
 import androidx.fragment.app.FragmentActivity
+import com.akashi.roadmap.common.logI
 import com.akashi.roadmap.glide.fragment.ActivityFragmentLifecycle
-import com.akashi.roadmap.glide.fragment.EmptyFragment
+import com.akashi.roadmap.glide.fragment.ReportFragment
 import com.akashi.roadmap.glide.fragment.LifecycleListener
 
 /**
@@ -28,7 +29,7 @@ class RequestManager(private val fragmentActivity: FragmentActivity) : Lifecycle
             val fragment = this.findFragmentByTag(FRAGMENT_TAG)
             if (fragment == null) {
                 beginTransaction().run {
-                    add(EmptyFragment(), FRAGMENT_TAG)
+                    add(ReportFragment(contextLifecycle), FRAGMENT_TAG)
                     commitAllowingStateLoss()
                 }
             }
@@ -47,6 +48,7 @@ class RequestManager(private val fragmentActivity: FragmentActivity) : Lifecycle
      * lifecycle call back
      */
     override fun onStart() {
+        logI("RequestManager - onStart")
     }
 
     /**
@@ -54,12 +56,14 @@ class RequestManager(private val fragmentActivity: FragmentActivity) : Lifecycle
      */
     override fun onStop() {
 //        pauseRequest()
+        logI("RequestManager - onStop")
     }
 
     /**
      * lifecycle call back
      */
     override fun onDestroy() {
+        logI("RequestManager - onDestroy")
         contextLifecycle.removeListener(this)
         // 1. 关闭活动缓存
         engine.close()
