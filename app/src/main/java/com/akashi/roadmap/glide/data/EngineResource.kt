@@ -22,6 +22,9 @@ data class EngineResource(
      */
     var count: Int = 0
 ) {
+    /**
+     * +1
+     */
     fun acquire() {
         if (mBitmap?.isRecycled == true) {
             logW("acquire(): bitmap已经被回收了, key=$key, count=$count")

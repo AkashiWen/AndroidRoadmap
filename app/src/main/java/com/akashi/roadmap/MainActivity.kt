@@ -7,6 +7,7 @@ import com.akashi.roadmap.common.clickJitter
 import com.akashi.roadmap.databinding.ActivityMainBinding
 import com.akashi.roadmap.glide.GlideActivity
 import com.akashi.roadmap.okhttp.OkHttpActivity
+import com.akashi.roadmap.proxyPattern.SubjectProxyActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,6 +27,12 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnGlide.clickJitter {
             Intent(this, GlideActivity::class.java).run {
+                startActivity(this)
+            }
+        }
+
+        binding.btnProxy.clickJitter {
+            Intent(this, SubjectProxyActivity::class.java).run {
                 startActivity(this)
             }
         }

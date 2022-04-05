@@ -22,5 +22,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_okHttp" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_proxy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Proxy实现隔离层"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_glide" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
