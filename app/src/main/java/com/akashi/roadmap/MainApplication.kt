@@ -3,6 +3,7 @@ package com.akashi.roadmap
 import android.app.Application
 import com.akashi.roadmap.proxyPattern.HttpProxy
 import com.akashi.roadmap.proxyPattern.realSubjects.OkhttpProcessor
+import com.akashi.roadmap.proxyPattern.realSubjects.VolleyProcessor
 
 class MainApplication : Application() {
 
@@ -16,6 +17,6 @@ class MainApplication : Application() {
 
         // 1. 隔离层 —— 初始化proxyPattern下代理角色HttpHelper持有的源对象
         HttpProxy.init(OkhttpProcessor())
-//        HttpHelper.instance.post()
+//        HttpProxy.init(VolleyProcessor(this))
     }
 }
