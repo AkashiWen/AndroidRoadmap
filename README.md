@@ -47,10 +47,10 @@
 **Proxy:**
 ``HttpProxy.kt``
 
-**RealSubject**
+**RealSubject:**
 
 - ``OkhttpProcessor.kt``
 - ``VolleyProcessor.kt``
 
-**Client**
+**Client:**
 ``SubjectProxyActivity.kt``
