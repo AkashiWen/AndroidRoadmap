@@ -6,4 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".proxyPattern.SubjectProxyActivity">
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_proxy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用代理模式请求"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_koin_okhttp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用koin#okhttp请求"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_proxy" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_koin_volley"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用koin#volley请求"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_koin_okhttp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

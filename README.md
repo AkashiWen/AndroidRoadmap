@@ -19,7 +19,7 @@
 
 ## 2. okhttp
 
-## 3. 隔离层设计 - 代理模式和hilt
+## 3. 隔离层设计 - 代理模式和Koin
 
 ### 3.1 代理模式
 
@@ -54,3 +54,7 @@
 
 **Client:**
 ``SubjectProxyActivity.kt``
+
+### 3.2 Koin
+
+[Koin](https://insert-koin.io/)
