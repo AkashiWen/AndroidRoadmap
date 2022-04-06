@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Roadmap">
         <activity
+            android:name=".annotation.AnnotationActivity"
+            android:exported="false" />
+        <activity
             android:name=".proxyPattern.SubjectProxyActivity"
             android:exported="false" />
         <activity
