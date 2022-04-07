@@ -1,4 +1,4 @@
-package com.akashi.roadmap.annotation.annotations
+package com.akashi.annotations
 
 /**
  * 普通注解

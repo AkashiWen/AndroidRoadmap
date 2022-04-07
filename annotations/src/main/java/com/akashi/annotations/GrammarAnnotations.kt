@@ -1,8 +1,8 @@
-package com.akashi.roadmap.annotation.annotations
+package com.akashi.annotations
 
 import androidx.annotation.IntDef
-import com.akashi.roadmap.annotation.annotations.WeekDay.Companion.MONDAY
-import com.akashi.roadmap.annotation.annotations.WeekDay.Companion.TUESDAY
+import com.akashi.annotations.WeekDay.Companion.MONDAY
+import com.akashi.annotations.WeekDay.Companion.TUESDAY
 
 
 /**

@@ -1,7 +1,7 @@
 package com.akashi.roadmap
 
-import com.akashi.roadmap.annotation.annotations.Week
-import com.akashi.roadmap.annotation.annotations.WeekDay
+import com.akashi.annotations.WeekDay
+import com.akashi.roadmap.annotation.Week
 import org.junit.Assert
 import org.junit.Test
 

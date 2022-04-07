@@ -1,10 +1,10 @@
 package com.akashi.roadmap.annotation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import com.akashi.annotations.BindView
 import com.akashi.roadmap.R
-import com.akashi.roadmap.annotation.annotations.BindView
 import com.akashi.roadmap.databinding.ActivityAnnotationBinding
 
 class AnnotationActivity : AppCompatActivity() {
