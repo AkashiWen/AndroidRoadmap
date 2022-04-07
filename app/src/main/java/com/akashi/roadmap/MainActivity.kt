@@ -3,6 +3,7 @@ package com.akashi.roadmap
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.akashi.roadmap.annotation.AnnotationActivity
 import com.akashi.roadmap.common.clickJitter
 import com.akashi.roadmap.databinding.ActivityMainBinding
 import com.akashi.roadmap.glide.GlideActivity
@@ -20,22 +21,25 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnOkHttp.clickJitter {
-            Intent(this, OkHttpActivity::class.java).run {
-                startActivity(this)
-            }
+            launchActivity(OkHttpActivity::class.java)
         }
 
         binding.btnGlide.clickJitter {
-            Intent(this, GlideActivity::class.java).run {
-                startActivity(this)
-            }
+            launchActivity(GlideActivity::class.java)
         }
 
         binding.btnProxy.clickJitter {
-            Intent(this, SubjectProxyActivity::class.java).run {
-                startActivity(this)
-            }
+            launchActivity(SubjectProxyActivity::class.java)
         }
 
+        binding.btnApt.clickJitter {
+            launchActivity(AnnotationActivity::class.java)
+        }
+    }
+
+    private fun launchActivity(activity: Class<out AppCompatActivity>) {
+        Intent(this, activity).run {
+            startActivity(this)
+        }
     }
 }

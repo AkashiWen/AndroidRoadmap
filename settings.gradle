@@ -14,5 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Roadmap"
 include ':app'
-include ':annotationCompiler'
 include ':annotations'
+include ':annotation_compiler'

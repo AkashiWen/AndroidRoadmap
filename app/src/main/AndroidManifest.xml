@@ -34,11 +34,6 @@
             android:name=".okhttp.OkHttpActivity"
             android:exported="false" />
         <activity android:name=".glide.GlideActivity" />
-        <activity
-            android:name=".FullscreenActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="false"
-            android:theme="@style/Theme.Roadmap.Fullscreen" />
     </application>
 
 </manifest>
