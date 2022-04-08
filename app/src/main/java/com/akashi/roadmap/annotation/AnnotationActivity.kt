@@ -9,18 +9,17 @@ import com.akashi.roadmap.R
 
 class AnnotationActivity : AppCompatActivity() {
 
-//    lateinit var binding: ActivityAnnotationBinding
-
     @BindView(R.id.tv)
-    val textView: TextView? = null
+    var textView: TextView? = null
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        binding = ActivityAnnotationBinding.inflate(layoutInflater)
-//        setContentView(binding.root)
         setContentView(R.layout.activity_annotation)
+
         AButterKnife.bind(this)
+
+        // 如果AButterKnife.bind(this)成功生效就会显示下面文字
         textView?.text = "AButterKnife!!"
     }
 

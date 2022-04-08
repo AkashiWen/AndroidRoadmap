@@ -1,6 +1,8 @@
 package com.akashi.annotation_compiler
 
 import com.akashi.annotations.BindView
+import com.squareup.kotlinpoet.*
+import com.squareup.kotlinpoet.ParameterizedTypeName.Companion.parameterizedBy
 import java.io.Writer
 import javax.annotation.processing.*
 import javax.lang.model.SourceVersion
@@ -73,7 +75,7 @@ class Compiler : AbstractProcessor() {
         //| activity1 | variables
         //| activity2 | variables
         //| activity3 | variables
-        runFool(map)
+        runPoet(map)
 
         return false
     }
@@ -82,11 +84,76 @@ class Compiler : AbstractProcessor() {
      * 使用kotlinpoet生成source file
      */
     private fun runPoet(map: MutableMap<String, MutableList<VariableElement>>) {
+        val iterator = map.keys.iterator()
+        while (iterator.hasNext()) {
+            val activityName = iterator.next()
+            val variableElements = map[activityName] ?: return
+            // package name. enclosingElement: 对象的包裹对象
+            val enclosingElement = variableElements[0].enclosingElement
+            val packageName = processingEnv.elementUtils.getPackageOf(enclosingElement).toString()
+            // class name
+            val className = "${activityName}_ViewBinding"
 
+            try {
+                val superInterface = ClassName(packageName, "IBinder")
+                val activity = ClassName(packageName, activityName)
+
+                // 1. 创建类，构造函数
+                val typeSpec = TypeSpec.classBuilder(className)
+                    // 添加父类IBinder和泛型约束
+                    .addSuperinterface(
+                        superInterface.parameterizedBy(activity)
+                    )
+
+                // 2. 创建方法
+                val func = FunSpec.builder("bind")
+                    .addModifiers(KModifier.OVERRIDE)
+                    .addParameter("target", activity)
+
+                for (variableElement in variableElements) {
+                    // 变量名
+                    val variableName = variableElement.simpleName.toString()
+                    // 变量id
+                    val id = variableElement.getAnnotation(BindView::class.java).value
+                    // 拼接
+                    func.addStatement("target.${variableName}=target.findViewById(${id})")
+                }
+
+
+                // 3. 创建文件
+                val sourceFile =
+                    FileSpec.builder(packageName, className)
+                        .addType(
+                            // 添加构造方法
+                            typeSpec
+                                // 添加重写方法@Bind
+                                .addFunction(
+                                    func.build()
+                                )
+                                .build()
+                        )
+                        .build()
+
+                sourceFile.writeTo(filer)
+            } catch (e: Throwable) {
+                e.printStackTrace()
+            }
+        }
     }
 
+//    package com.akashi.roadmap.annotation;
+//    import com.akashi.roadmap.annotation.IBinder;
+//    public class AnnotationActivity_ViewBinding implements IBinder<com.akashi.roadmap.annotation.AnnotationActivity> {
+//        @Override
+//        public void bind(com.akashi.roadmap.annotation.AnnotationActivity target) {
+//            target.textView = (android.widget.TextView) target.findViewById(2131231145);
+//
+//        }
+//    }
     /**
      * 手写source file
+     * 修改文件位置会导致修改
+     * 不推荐
      */
     private fun runFool(map: MutableMap<String, MutableList<VariableElement>>) {
         var writer: Writer? = null

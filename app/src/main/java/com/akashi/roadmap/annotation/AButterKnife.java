@@ -2,6 +2,9 @@ package com.akashi.roadmap.annotation;
 
 import android.app.Activity;
 
+/**
+ * 自定义buffer knife
+ */
 public class AButterKnife {
     public static void bind(Activity activity) {
         String name = activity.getClass().getName() + "_ViewBinding";
