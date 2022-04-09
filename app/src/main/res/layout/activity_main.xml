@@ -38,5 +38,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_proxy" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_dynamic_proxy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="动态代理"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_apt" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

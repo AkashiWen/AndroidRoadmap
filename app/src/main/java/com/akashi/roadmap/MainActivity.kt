@@ -9,6 +9,7 @@ import com.akashi.roadmap.databinding.ActivityMainBinding
 import com.akashi.roadmap.glide.GlideActivity
 import com.akashi.roadmap.okhttp.OkHttpActivity
 import com.akashi.roadmap.proxyPattern.SubjectProxyActivity
+import com.akashi.roadmap.retrofit.RetrofitActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,6 +35,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnApt.clickJitter {
             launchActivity(AnnotationActivity::class.java)
+        }
+
+        binding.btnDynamicProxy.clickJitter {
+            launchActivity(RetrofitActivity::class.java)
         }
     }
 

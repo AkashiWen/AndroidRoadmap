@@ -16,3 +16,4 @@ rootProject.name = "Roadmap"
 include ':app'
 include ':annotations'
 include ':annotation_compiler'
+include ':test'

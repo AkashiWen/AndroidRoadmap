@@ -52,18 +52,14 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
     implementation 'com.android.volley:volley:1.2.1'
 
-    // Koin main features for Android
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    // Koin
     implementation "io.insert-koin:koin-android:$koin_version"
-    // No more koin-android-viewmodel, koin-android-scope, koin-android-fragment
 
     // Java Compatibility
     implementation "io.insert-koin:koin-android-compat:$koin_version"
-    // Jetpack WorkManager
-//    implementation "io.insert-koin:koin-androidx-workmanager:$koin_version"
-    // Navigation Graph
-//    implementation "io.insert-koin:koin-androidx-navigation:$koin_version"
-    // Jetpack Compose
-//    implementation "io.insert-koin:koin-androidx-compose:$koin_version"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
