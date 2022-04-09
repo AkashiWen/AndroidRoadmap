@@ -9,5 +9,5 @@ import org.koin.dsl.module
 
 val proxyPatternModule = module {
     single<IHttpProcessor> { OkhttpProcessor() }
-    single<IHttpProcessor>(named("volley")) { VolleyProcessor(MainApplication.context) }
+    single<IHttpProcessor>(named("volley")) { VolleyProcessor(MainApplication.instance) }
 }
