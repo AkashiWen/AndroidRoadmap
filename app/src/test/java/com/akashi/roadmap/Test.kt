@@ -2,8 +2,10 @@ package com.akashi.roadmap
 
 import com.akashi.annotations.WeekDay
 import com.akashi.roadmap.annotation.Week
+import com.akashi.roadmap.executor.ClassThreadPool
 import org.junit.Assert
 import org.junit.Test
+import java.util.concurrent.atomic.AtomicInteger
 
 class Test {
 
@@ -28,5 +30,15 @@ class Test {
         val week = Week()
         week.day = WeekDay.MONDAY
         Assert.assertEquals(week.day, WeekDay.MONDAY)
+    }
+
+    @Test
+    fun run_executor() {
+        val pool = ClassThreadPool(AtomicInteger(2), 1000)
+        for (i in 0..20) {
+            pool.execute {
+                println("Thread: ${Thread.currentThread()} value: $i ")
+            }
+        }
     }
 }

@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Roadmap">
         <activity
+            android:name=".executor.ExecutorActivity"
+            android:exported="false" />
+        <activity
             android:name=".retrofit.RetrofitActivity"
             android:exported="false" />
         <activity
