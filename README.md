@@ -40,7 +40,6 @@
 - ``ICallback.kt``
 - 默认抽象实现处理json转换``HttpCallback.kt``
 
-
 **Subject:**
 ``IHttpProcessor.kt``
 
@@ -59,7 +58,6 @@
 
 [Koin](https://insert-koin.io/)
 
-
 ## 4. Annotation 注解和注解处理器
 
 [src/main/javacom.akashi.roadmap/annotation](https://github.com/AkashiWen/AndroidRoadmap/blob/master/app/src/main/java/com/akashi/roadmap/annotation/README.md)
@@ -67,3 +65,5 @@
 ## 5. Retrofit和动态代理
 
 [src/main/javacom.akashi.roadmap/retrofit](https://github.com/AkashiWen/AndroidRoadmap/blob/master/app/src/main/java/com/akashi/roadmap/retrofit/README.md)
+
+## 6. executor线程池
