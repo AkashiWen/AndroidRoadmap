@@ -1,9 +1,11 @@
 package com.akashi.roadmap
 
 import android.app.Application
+import android.os.Build
 import com.akashi.roadmap.proxyPattern.HttpProxy
 import com.akashi.roadmap.proxyPattern.module.proxyPatternModule
 import com.akashi.roadmap.proxyPattern.realSubjects.OkhttpProcessor
+import com.akashi.roadmap.utils.startFPSMonitor
 import org.koin.core.context.startKoin
 
 class MainApplication : Application() {
@@ -24,5 +26,8 @@ class MainApplication : Application() {
         startKoin {
             modules(proxyPatternModule)
         }
+
+        // 3. 帧率检测
+        if (BuildConfig.DEBUG) startFPSMonitor()
     }
 }

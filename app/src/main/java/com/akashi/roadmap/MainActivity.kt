@@ -1,8 +1,8 @@
 package com.akashi.roadmap
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.akashi.roadmap.annotation.AnnotationActivity
 import com.akashi.roadmap.common.clickJitter
 import com.akashi.roadmap.databinding.ActivityMainBinding
